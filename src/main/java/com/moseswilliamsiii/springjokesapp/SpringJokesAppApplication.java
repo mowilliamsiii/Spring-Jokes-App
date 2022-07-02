@@ -1,7 +1,5 @@
 package com.moseswilliamsiii.springjokesapp;
 
-import com.moseswilliamsiii.services.JokesService;
-import com.moseswilliamsiii.services.JokesServiceImpl;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -12,9 +10,9 @@ public class SpringJokesAppApplication {
 
         SpringApplication.run(SpringJokesAppApplication.class, args);
 
-        JokesService jokesService = new JokesServiceImpl();
-
-        System.out.println(jokesService.getRandomJoke());
+//        JokesService jokesService = new JokesServiceImpl();
+//
+//        System.out.println(jokesService.getRandomJoke());
     }
 
 }

@@ -1,6 +1,6 @@
-package com.moseswilliamsiii.controllers;
+package com.moseswilliamsiii.springjokesapp.controllers;
 
-import com.moseswilliamsiii.services.JokesService;
+import com.moseswilliamsiii.springjokesapp.services.JokesService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,7 +17,8 @@ public class JokeController {
 
     @RequestMapping({"/",""})
     public String showJoke(Model model){
-        model.addAttribute("joke",jokesService.getRandomJoke());
+        String joke = jokesService.getRandomJoke();
+        model.addAttribute("joke",joke);
 
         return "index";
     }
